@@ -1,0 +1,60 @@
+
+{% extends 'base.html'%}
+{%import 'macros.html' as macro%}
+    
+    {%block content%}
+<!-- 
+    <h1>hello world</h1>
+    <h1> {{ message }} </h1>
+  
+        <h3> Popular Movies</h3>
+         <ul>
+            {% for popular_movie in popular %}
+                <li>{{ popular_movie.title}}</li>
+                {{ popular_movie.overview}}<br>
+                {{ popular_movie.vote_count}}
+            {% endfor %}
+        </ul>
+
+      
+        <h3> Upcoming Movies </h3>
+         <ul>
+            {% for upcoming_movie in upcoming %}
+                <li>{{ upcoming_movie.title}}</li>
+                {{ upcoming_movie.overview}}<br>
+                {{ upcoming_movie.vote_count}}
+
+            {% endfor %}
+        </ul>
+       
+        <h3>Now Showing</h3>
+         <ul>
+            {% for now_showing_movie in now_showing %}
+                <li>{{ now_showing_movie.title}}</li>
+                {{ now_showing_movie.overview}}<br>
+                {{ now_showing_movie.vote_count}}
+            {% endfor %}
+
+   </ul> -->
+
+
+
+   <body>
+    <!-- Popular movie -->
+    <h3> Popular Movies</h3>
+    <ul>
+        {{ macro.displayMovieList(popular)}}
+    </ul>
+    <!-- Upcoming movie  -->
+    <h3> Upcoming Movies </h3>
+    <ul>
+        {{ macro.displayMovieList(upcoming)}}
+    </ul>
+    <!-- Now showing movie -->
+    <h3>Now Showing</h3>
+    <ul>
+        {{ macro.displayMovieList(now_showing)}}
+    </ul>
+</body>
+
+    {% endblock %} 

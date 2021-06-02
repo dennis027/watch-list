@@ -1,0 +1,19 @@
+{{extends 'base.html'}}
+{{%import 'macro.html as macro'%}}
+
+{%block content%}
+<div class="container">
+    <div class="row">
+        <h3>
+            Found {{movies | count}} matches
+        </h3>
+    </div>
+    <hr>
+    <ul>
+            {{macro.displayMovielist(movies)}}
+    </ul>
+
+
+</div>
+
+{%endblock%}
